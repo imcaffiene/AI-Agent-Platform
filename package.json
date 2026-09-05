@@ -1,0 +1,23 @@
+{
+  "name": "ai-agent-platform",
+  "version": "0.1.0",
+  "private": "true",
+  "description": "Self-hostable managed agent service for long-running infrastructure work.",
+  "type": "module",
+  "workspaces": [
+    "app/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "bun run --filter '*' typecheck",
+    "test": "bun test",
+    "test:unit": "bun test",
+    "check": "bun run typecheck && bun run test:unit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
